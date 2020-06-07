@@ -16,8 +16,7 @@
   <div class="menu fz_3">
     <p>about</p>
     <p>works</p>
-    <p>join</p>
-    <p>contact</p>
+    <p>join / contact</p>
   </div>
 </div>
 <div id="wrap">
@@ -25,14 +24,29 @@
   <div id="top">
     <p class="zp_title fz_1">
       デザインで<br>
-      世界に新しい<br>
+      地球に新しい<br>
       ソリューションを<br>
     </p>
     <img src="./src/img/zaprototype_ot.svg" class="ot rellax" data-rellax-speed="6">
+
+    <p class="top_marquee">
+      UI DESIGN<br>
+      WEB DESIGN<br>
+      GRAPHIC<br>
+      BRANDING<br>
+      UI DESIGN<br>
+      WEB DESIGN<br>
+      GRAPHIC<br>
+      BRANDING<br>
+      UI DESIGN<br>
+      WEB DESIGN<br>
+      GRAPHIC
+    </p>
+
   </div>
 
   <div id="about">
-    <div id="container"></div>
+    <div class="container_about"></div>
       <p class="title">about</p>
 
       <div class="about_contents">
@@ -40,7 +54,72 @@
         <p class="about_contents_text fz_3">
           <span>デザイン</span>は表層的なものではなく、人間の深層心理に深く影響するものです。<br>ビジネスを動かす上で適切な<span>デザイン</span>は大きな力を生みます。私たちは0(zaprototype) + ?(地球人) = innovation をバリューに活動しています。
         </p>
+        <p class="about_contents_text_en">
+          Design is not superficial; it has a profound effect on the deep human psyche.<br>The right design can create a lot of power in driving a business.<br> We believe that 0(zaprototype) + ? (earthlings) = innovation. 
+        </p>
+        <div class="button">
+          more
+        </div>
       </div>
+
+  </div>
+
+  <div id="works">
+    <div class="container_works"></div>
+      <p class="title">works</p>
+
+      <div class="works_contents">
+        <p class="works_contents_title fz_3">
+          まだ実績はありません。伸び代です。
+        </p>
+      </div>
+  </div>
+
+  <div id="join">
+    <div class="container_join"></div>
+      <p class="title">join / contact</p>
+
+      <div class="join_contents">
+        <p class="join_contents_title fz_1">
+          メンバー絶賛募集中
+        </p>
+        <p class="join_contents_text fz_3">
+          私たちと共に活動してくれる心強い仲間を募集しています。<br>お気軽にお問い合わせください！
+        </p>
+        <p class="join_contents_text_en">
+          We are looking for encouraging colleagues to work with us.<br>Feel free to contact us! 
+        </p>
+        <div class="button">
+          join
+        </div>
+        <p class="or fz_2">- OR -</p>
+        <p class="contact_contents_title fz_1">
+          お問い合わせ
+        </p>
+        <p class="join_contents_text fz_3">
+          ご依頼・ご不明な点等ございましたらお気軽にお問い合わせください。
+        </p>
+        <p class="join_contents_text_en">
+          If you have any requests or questions, please feel free to contact us. 
+        </p>
+        <div class="button">
+          contact
+        </div>
+      </div>
+
+      <footer>
+        <div id="footer">
+          <img src="./src/img/zaprototype_ot_white.svg" class="ot_white">
+          <p class="sns">
+            Follow our community to create the best design possible!
+          </p>
+          <div class="footer_menu fz_4">
+            <p>about</p>
+            <p>works</p>
+            <p>join / contact</p>
+          </div>
+        </div>
+      </footer>
 
   </div>
 
@@ -50,7 +129,23 @@
 
 var rellax = new Rellax('.rellax'); 
 
-var circle = new ProgressBar.Circle(container, {
+var circle_about = new ProgressBar.Circle('.container_about', {
+  strokeWidth: 30,
+  easing: 'easeInOut',
+  duration: 1200,
+  color: '#ff6972',
+  svgStyle: null
+});
+
+var circle_works = new ProgressBar.Circle('.container_works', {
+  strokeWidth: 30,
+  easing: 'easeInOut',
+  duration: 1200,
+  color: '#ff6972',
+  svgStyle: null
+});
+
+var circle_join = new ProgressBar.Circle('.container_join', {
   strokeWidth: 30,
   easing: 'easeInOut',
   duration: 1200,
@@ -59,18 +154,39 @@ var circle = new ProgressBar.Circle(container, {
 });
 
 
+circle_about.path.setAttribute('stroke-linecap', 'round');
 
-circle.path.setAttribute('stroke-linecap', 'round');
+circle_works.path.setAttribute('stroke-linecap', 'round');
 
-$('#container').on('inview', function() {
+circle_join.path.setAttribute('stroke-linecap', 'round');
 
-circle.animate(1.0);
+$('.container_about').on('inview', function() {
+
+circle_about.animate(1.0);
+
+});
+
+$('.container_works').on('inview', function() {
+
+circle_works.animate(1.0);
+
+});
+
+$('.container_join').on('inview', function() {
+
+circle_join.animate(1.0);
 
 });
 
 $('.about_contents').on('inview', function() {
 
   $("div").addClass("fadeIn");
+
+});
+
+$('.about_contents').on('inview', function() {
+
+$("div").addClass("fadeIn");
 
 });
 
