@@ -8,9 +8,14 @@
   <script src="./src/js/rellax.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="./src/js/jquery.inview.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+
   <title>zaprototype</title>
 </head>
 <body>
+
+<div id="particles-js" class="page-loading">
+
 <div id="header">
   <img src="./src/img/zaprototype_logo.svg" class="logo">
   <div class="menu fz_3">
@@ -124,7 +129,13 @@
 
 </div>
 
+</div>
+
 <script>
+
+Pace.on('done', function(){
+            $('.page-loading').fadeIn();
+        });
 
 var rellax = new Rellax('.rellax'); 
 
