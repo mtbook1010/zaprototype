@@ -108,6 +108,7 @@ body{
   color: #fcfcfe;
   -webkit-text-stroke: 3px #ff6972;
   opacity: 0.2;
+  overflow-x: hidden;
 }
 
 .footer_marquee{
