@@ -41,17 +41,17 @@ header{
 }
 
 @keyframes wobble {
-  0%,
-  100% {
-    transform: rotate3d(-1, 1, 0, 30deg);
-  }
-  25% {
-    transform: rotate3d(1, 1, 0, 30deg);
-  }
-  50% {
-    transform: rotate3d(1, -1, 0, 30deg);
-  }
-  75% {
-    transform: rotate3d(-1, -1, 0, 30deg);
-  }
+	0%,
+	100% {
+    transform: rotate3d(-1, 1, 0, 40deg);
+	}
+	25% {
+		transform: rotate3d(1, 1, 0, 40deg);
+	}
+	50% {
+		transform: rotate3d(1, -1, 0, 40deg);
+	}
+	75% {
+		transform: rotate3d(-1, -1, 0, 40deg);
+	}
 }

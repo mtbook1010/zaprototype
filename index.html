@@ -21,16 +21,17 @@
     <div class="top-fv-box">
       <span data-z data-z-depth="40px" class="ztxt-logo">
         <img width="200" height="268" src="src/img/logo-fv.png">
-      <span>
+        <span>
     </div>
   </div>
 
-  <script src="src/js/luxy.js" charset="utf-8"></script>
   <script src="https://bennettfeely.com/ztext/js/ztext.min.js"></script>
 </body>
 
 <script charset="utf-8">
-  luxy.init();
+  if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)) {
+    luxy.init();
+  }
 </script>
 
 <script>
