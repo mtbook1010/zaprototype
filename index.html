@@ -6,22 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>zaptype</title>
   <script src="src/js/luxy.js" charset="utf-8"></script>
+  <script src="src/js/ztext.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="src/css/destyle.css">
+
+  <header>
+    <a href="#"><img class="logo" src="src/img/logo.svg"></a>
+  </header>
+
 </head>
 
-<header>
-  <a href="#"><img class="logo" src="src/img/logo.svg"></a>
-  <div class="menu"></div>
-</header>
+<body>
+  <div id="luxy">
+    <div class="top-fv-box">
+      <span data-z data-z-depth="40px" class="ztxt-logo">
+        <img width="200" height="268" src="src/img/logo-fv.png">
+      <span>
+    </div>
+  </div>
 
-<body id="luxy">
-  <div class="box1"></div>
-  <div class="box2"></div>
+  <script src="src/js/luxy.js" charset="utf-8"></script>
+  <script src="https://bennettfeely.com/ztext/js/ztext.min.js"></script>
 </body>
 
 <script charset="utf-8">
   luxy.init();
+</script>
+
+<script>
+  var ztxt = new Ztextify(".hero-text", {
+    depth: "30px",
+    layers: 8,
+    fade: true,
+    direction: "forwards",
+    event: "pointer",
+    eventRotation: "35deg"
+  });
 </script>
 
 </html>
